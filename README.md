@@ -27,7 +27,18 @@ README.md
 
 ## Быстрый старт
 
- ## [1) Бэкенд](#)
+
+## [1) Фронтенд](#)
+```powershell
+  cd lycoris\web
+# создаём файл .env.local:
+# NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+npm install
+npm run dev
+
+Открой http://localhost:3000
+```
+ ## [2) Бекенд](#)
 
 ```powershell
 cd lycoris
@@ -37,17 +48,8 @@ pip install --upgrade pip
 pip install -r ml/requirements.txt
 python -m uvicorn lycoris.ml.app:app --host 127.0.0.1 --port 8000
 
-
 Веса кладём в ml/weights/ под именами damage.keras и soc.keras.
 
-
-  cd lycoris\web
-# создаём файл .env.local:
-# NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
-npm install
-npm run dev
-
-Открой http://localhost:3000
 
 API
 GET /health
