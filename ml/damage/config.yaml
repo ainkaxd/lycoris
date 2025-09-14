@@ -1,0 +1,4 @@
+class_names: ["undamaged", "damaged"]
+img_height: 224
+img_width: 224
+model_save_path: "lycoris/ml/weights/damage.keras"

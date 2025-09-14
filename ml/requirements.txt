@@ -1,0 +1,14 @@
+tensorflow>=2.9.0
+numpy
+matplotlib
+scikit-learn
+pyyaml
+seaborn
+fastapi
+uvicorn[standard]
+pillow
+tensorflow
+PyYAML
+Pillow
+numpy
+python-multipart

@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+  --color-bg:#0F1115;      /* тёмный фон */
+  --color-card:#1A1D23;    /* цвет карточек */
+  --color-primary:#C0F11C; /* лаймовый акцент */
+  --color-text:#FFFFFF;    /* основной текст */
+}
+html,body{ background:var(--color-bg); color:var(--color-text); }
+:root{
+  --color-bg:#0F1115;
+  --color-card:#1A1D23;
+  --color-primary:#C0F11C;
+  --color-text:#FFFFFF;
+}
+html,body{ background:var(--color-bg); color:var(--color-text); }
+/* === inDrive palette-ish === */
+:root{
+  --color-bg:#111315;        /* фон глубже */
+  --color-card:#1b1f24;      /* карточки */
+  --color-muted:#2a2f36;     /* разделители/hover */
+  --color-primary:#C0F11C;   /* лаймовый акцент */
+  --color-text:#ffffff;      /* текст */
+  --ring:#c0f11c66;          /* focus ring */
+}
+html,body{ background:var(--color-bg); color:var(--color-text); }
+
+/* универсальные ховеры/фокусы */
+.button-like{ outline: none; }
+.button-like:focus-visible{ box-shadow: 0 0 0 3px var(--ring); }
+.input-like{ outline: none; }
+.input-like:focus-visible{ box-shadow: 0 0 0 3px var(--ring); }
+
+/* стилизованный file input (скрываем оригинал) */
+.file-input{ position: relative; }
+.file-input input[type="file"]{ 
+  position:absolute; inset:0; opacity:0; cursor:pointer;
+}
+.file-input .fake{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.75rem 1rem; border-radius:12px;
+  background: var(--color-muted); border:1px solid #3a3f47;
+}
+.file-input .fake.active{ 
+  border-color: var(--color-primary);
+  background: rgba(192,241,28,.12);
+}
+
+
+/* Большая зона загрузки */
+.dropzone{
+  border: 2px dashed #3a3f47;
+  border-radius: 18px;
+  background: var(--color-muted);
+  padding: 24px;
+  transition: .15s ease;
+}
+.dropzone.hover{
+  border-color: var(--color-primary);
+  background: rgba(192,241,28,.08);
+}
+.drop-actions{
+  display:flex; gap:.75rem; align-items:center; flex-wrap:wrap;
+}
+.btn-accent{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.75rem 1rem; border-radius:12px;
+  background: rgba(192,241,28,.15); border:1px solid #C0F11C; color:#C0F11C;
+}
+.status{
+  font-size:.9rem; opacity:.85;
+}
+.status.ok{ color:#C0F11C; opacity:1; }

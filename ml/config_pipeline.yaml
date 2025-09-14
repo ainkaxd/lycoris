@@ -1,0 +1,7 @@
+iqa_model_path: null  # Не используется
+damage_model_path: "models/best_model.h5"
+quality_threshold: 40.0
+damage_class_names: ['no_damage', 'damage', 'useless']
+img_height: 224
+img_width: 224
+batch_size: 4
